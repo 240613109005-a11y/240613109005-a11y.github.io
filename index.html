@@ -1,25 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Patel Divyang — Portfolio</title>
+  <meta name="description" content="Portfolio of Patel Divyang — Projects, Skills and Contact.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://placehold.co/32x32?text=P" />
 </head>
 <body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="#home">Patel Divyang</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="small-btn" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button id="burger" class="burger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>This website is created for FREE using GitHub Pages.</p>
-    </header>
-
-    <section class="container">
-        <h2>About Me</h2>
-        <p>Hello! My name is Patel Divyang. This is my first website hosted on GitHub.</p>
-
-        <h2>Contact</h2>
-        <p>Email: youremail@example.com</p>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Hello, I'm <span class="accent">Patel Divyang</span></h1>
+          <p class="lead">Electrical Engineering student • Building simple, useful web & embedded projects. Available for internships and freelance.</p>
+          <p class="cta-row">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn ghost" href="mailto:youremail@example.com">Email Me</a>
+            <a class="btn outline" href="resume.pdf" download>Download Resume</a>
+          </p>
+          <p class="muted">Tip: replace the placeholders (email, resume.pdf, projects) with your own files.</p>
+        </div>
+        <div class="card profile-card">
+          <img class="avatar" src="https://placehold.co/300x300?text=Photo" alt="Profile photo">
+          <h3>Patel Divyang</h3>
+          <p class="muted">Student • Hobbyist Developer</p>
+          <div class="socials">
+            <a href="#" aria-label="GitHub">GitHub</a> •
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <p class="muted">Small selection of projects — add your own links/descriptions.</p>
+      <div class="grid projects-grid">
+        <article class="card project">
+          <h3>Personal Energy Dashboard</h3>
+          <p>Arduino + React dashboard for home energy monitoring.</p>
+          <p class="tags"><span>Arduino</span><span>React</span></p>
+          <p><a class="link" href="#" target="_blank">View code</a></p>
+        </article>
+
+        <article class="card project">
+          <h3>GTU Exam Organizer</h3>
+          <p>Tool to sort previous year papers chapter-wise and export to PDF.</p>
+          <p class="tags"><span>Python</span><span>PDF</span></p>
+          <p><a class="link" href="#" target="_blank">View demo</a></p>
+        </article>
+
+        <article class="card project">
+          <h3>Power System-II Notes</h3>
+          <p>Concise notes and viva questions with answers for quick revision.</p>
+          <p class="tags"><span>Study</span></p>
+          <p><a class="link" href="#" target="_blank">Open</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill"><strong>Power Systems</strong><small> (GTU syllabus)</small></div>
+        <div class="skill"><strong>Arduino / Embedded</strong></div>
+        <div class="skill"><strong>HTML/CSS/JS</strong></div>
+        <div class="skill"><strong>Python (scripts & PDF)</strong></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Want to collaborate or need help? Send an email or use the quick contact:</p>
+
+      <form class="contact-form" action="mailto:youremail@example.com" method="get" enctype="text/plain">
+        <input name="subject" placeholder="Subject" required>
+        <textarea name="body" rows="5" placeholder="Message"></textarea>
+        <div class="form-row">
+          <button class="btn" type="submit">Send Email</button>
+          <a class="btn ghost" href="tel:+911234567890">Call</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Patel Divyang — Built with ❤️ • Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
